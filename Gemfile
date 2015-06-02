@@ -29,6 +29,11 @@ group :development do
   gem 'spring'
 end
 
+group :development, :test do
+  # Linters/cops
+  gem 'rubocop', require: false
+end
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

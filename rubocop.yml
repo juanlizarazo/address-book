@@ -1,0 +1,24 @@
+# Rubocop settings
+# Overwrite some lint cop settings to be more flexible
+
+# Max number of lines inside a class
+Metrics/ClassLength:
+  Max: 150
+
+# ABC size: The ABC size is based on assignments,
+# branches (method calls), and conditions
+Metrics/AbcSize:
+  Max: 25
+
+# No docs
+Style/Documentation:
+  Enabled: false
+
+# Disable class/module style. If enabled, use compact.
+Style/ClassAndModuleChildren:
+  EnforcedStyle: compact
+  Enabled: false
+
+# Max number of lines inside a method
+Metrics/MethodLength:
+  Enabled: false
