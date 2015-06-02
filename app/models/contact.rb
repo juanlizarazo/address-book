@@ -4,4 +4,6 @@ class Contact
 
   field :firstname, type: String
   field :lastname, type: String
+
+  embeds_many :addresses
 end

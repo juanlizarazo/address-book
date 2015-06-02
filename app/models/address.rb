@@ -8,4 +8,6 @@ class Address
   field :state, type: String
   field :zipcode, type: String
   field :Country, type: String
+
+  embedded_in :contacts
 end
