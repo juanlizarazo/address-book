@@ -1,4 +1,4 @@
-# Address book [![Build Status](https://travis-ci.org/juanlizarazo/address-book.svg)](https://travis-ci.org/juanlizarazo/address-book) [![Code Climate](https://codeclimate.com/github/juanlizarazo/address-book/badges/gpa.svg)](https://codeclimate.com/github/juanlizarazo/address-book) [![Test Coverage](https://codeclimate.com/github/juanlizarazo/address-book/badges/coverage.svg)](https://codeclimate.com/github/juanlizarazo/address-book/coverage)
+# Address book [![Build Status](https://travis-ci.org/juanlizarazo/address-book.svg)](https://travis-ci.org/juanlizarazo/address-book) [![Code Climate](https://codeclimate.com/github/juanlizarazo/address-book/badges/gpa.svg)](https://codeclimate.com/github/juanlizarazo/address-book) [![Test Coverage](https://codeclimate.com/github/juanlizarazo/address-book/badges/coverage.svg)](https://codeclimate.com/github/juanlizarazo/address-book/coverage) [![Dependency Status](https://gemnasium.com/juanlizarazo/address-book.svg)](https://gemnasium.com/juanlizarazo/address-book)
 
 - TODO
 
