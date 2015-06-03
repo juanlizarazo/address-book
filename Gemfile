@@ -39,6 +39,9 @@ group :development do
   gem 'rubocop', require: false
 end
 
+# Code climate test coverage reports
+gem "codeclimate-test-reporter", group: :test, require: nil
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

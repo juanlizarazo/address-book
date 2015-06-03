@@ -1,4 +1,4 @@
-# Travis CI configuration file
+# Travis CI build configuration file
 language: ruby
 
 bundler_args: --without development
@@ -28,3 +28,12 @@ script:
 branches:
   only:
     - develop/master
+
+addons:
+  code_climate:
+    repo_token:
+      secure: "EAAIKpmK55TWH8TtsarC+joBCFtpmQWqdIrqhY+ivDqai+YadAInbWYpRaudZZAQj04jh9eQHEhiYp06xIhXlcDVEdjAYYxgYV4wj7ZFKNCYN0IFDjR7h1BWenVOWlFBvVXogFQFmUbDlpgzhKV1lHDgmUvmqs8NQFSJwOrVROeaSrO13a7UABvQOB+PLeMqUU4dSmmcWg0aJNOEiaoJtHpVwqYZWwQ/IKgoEFt35AfHEXNe+2jkkY4PXEVHuM9h9RydSx0ntBjm9R6O8AqUiPqmKibyVobMeZYBStfztQTL6gd6EKi/IjliSYonoJHKcs8tYJcepEE6FI94CTbsO1zMSDc3EPmkT4BsyAG87x59YstAiodL1iJesIc62Wg8w0o9oxYnkReRD4P+19fRgK4lE5OUCmiB4fP0ZN2UObRl6a9IbJJIg8ax9RduaEu4giJxVMYY2U8K0VX1SH74T41KByYFLfbq/9TdljW/GyDZKvOKM6dZeUkLZjb97fCazV/l/OM9puOxZ1zxa4VEeODtehwvSB4QfYXUHENBWKa7FZj0kL3tNdcXbqu1V0hrTYDm4ZNs3ATfhozJ7RkS6nmlEeQ2gB0xqZtWyH84pCpfqdWo+/IS3LVg9zSeuIiM/c52p15CpZgvAHpi8VLJR445bgXxI8FjzRjc5gwfFL0="
+
+notifications:
+  email:
+    - false
