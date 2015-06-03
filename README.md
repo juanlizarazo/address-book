@@ -1,6 +1,6 @@
-== README
+# Address book [![Build Status](https://travis-ci.org/juanlizarazo/address-book.svg)](https://travis-ci.org/juanlizarazo/address-book)
 
-# TODO
+- TODO
 
 The MIT License (MIT)
 
