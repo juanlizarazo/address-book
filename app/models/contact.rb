@@ -6,4 +6,6 @@ class Contact
   field :lastname, type: String
 
   embeds_many :addresses
+  embeds_many :phones
+  embeds_many :emails
 end
