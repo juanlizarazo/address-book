@@ -1,6 +1,10 @@
-# Address book [![Build Status](https://travis-ci.org/juanlizarazo/address-book.svg)](https://travis-ci.org/juanlizarazo/address-book)
-
+# Address book 
 - TODO
+
+## Code status 
+[![Build Status](https://travis-ci.org/juanlizarazo/address-book.svg)](https://travis-ci.org/juanlizarazo/address-book)
+
+## license
 
 The MIT License (MIT)
 
