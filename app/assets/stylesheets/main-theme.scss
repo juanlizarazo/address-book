@@ -5,6 +5,10 @@
 // Font awesome
 @import "font-awesome";
 
+//vars
+$opacity-start: 0;
+$opacity-end: 100;
+
 body {
   padding-top: 70px;
   background-color: #eee;
@@ -22,13 +26,16 @@ img {
 }
 
 tr.contact-row {
+  @include transition(all 0.3s);
   .actions {
-    display: none;
+    @include transition(opacity 0.5s);
+    opacity: $opacity-start;
   }
   &:hover {
     cursor: pointer;
+    font-size: $font-size-large;
     .actions {
-      display: inherit;
+      opacity: $opacity-end;
     }
   }
 }
