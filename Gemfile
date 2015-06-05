@@ -32,6 +32,8 @@ gem 'mongoid', '~> 4.0.0'
 
 gem 'bootstrap-sass', '~> 3.3.4'
 
+gem 'font-awesome-rails'
+
 # Code climate test coverage reports
 gem 'codeclimate-test-reporter', group: :test, require: nil
 
