@@ -32,6 +32,9 @@ gem 'mongoid', '~> 4.0.0'
 
 gem 'bootstrap-sass', '~> 3.3.4'
 
+# Compass Authoring CSS framework
+gem 'compass-rails'
+
 gem 'font-awesome-rails'
 
 # Code climate test coverage reports
