@@ -11,15 +11,16 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :firstname %><br>
     <%= f.text_field :firstname %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :lastname %><br>
     <%= f.text_field :lastname %>
   </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+
+  <%= f.submit 'Save', class: 'btn btn-success' do %>
+    <i class="fa fa-check-square-o"></i>
+  <% end %>
 <% end %>
