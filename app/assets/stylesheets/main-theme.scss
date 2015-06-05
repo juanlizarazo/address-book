@@ -1,6 +1,9 @@
-// import the CSS framework
+// import bootstrap
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+// Font awesome
+@import "font-awesome";
 
 // make all images responsive by default
 img {
