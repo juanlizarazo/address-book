@@ -5,6 +5,9 @@ class Contact
   field :firstname, type: String
   field :lastname, type: String
 
+  validates :firstname, presence: true
+  validates :lastname, presence: true
+
   embeds_many :addresses
   embeds_many :phones
   embeds_many :emails

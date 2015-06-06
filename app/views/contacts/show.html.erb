@@ -13,14 +13,28 @@
   </div>
   <div class="col-lg-12">
     <hr>
-    <p>
-      <strong>Firstname:</strong>
-      <%= @contact.firstname %>
-    </p>
-
-    <p>
-      <strong>Lastname:</strong>
-      <%= @contact.lastname %>
-    </p>
+  </div>
+  <div class="col-lg-12 contact-info">
+    <h3><%= @contact.firstname %> <%= @contact.lastname %></h3>
+    <br>
+    <div class="col-lg-6">
+      <p>
+        <strong><%= 'Address'.pluralize(@contact.addresses.count) %>:</strong>
+      <p>
+      <address>
+        <% @contact.addresses.each do |address| %>
+          <%= address.street_address_1 %><br>
+          <%= "#{address.street_address_2} <br>" unless address.street_address_2.blank? %>
+          <%= address.city %>, <%= address.state %> <%= address.zipcode %><br>
+          <%= address.country unless address.country.blank? %>
+        <% end %>
+      </address>
+    </div>
+    <div class="col-lg-6">
+      <p><strong><%= 'Phone'.pluralize(@contact.phones.count) %>:</strong></p>
+      <% @contact.phones.each do |phone| %>
+        <abbr title="Phone">P:</abbr> <%= number_to_phone(phone.number, area_code: true) %>
+      <% end %>
+    </div>
   </div>
 </div>

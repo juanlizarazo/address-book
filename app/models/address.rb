@@ -7,7 +7,7 @@ class Address
   field :city, type: String
   field :state, type: String
   field :zipcode, type: String
-  field :Country, type: String
+  field :country, type: String
 
   embedded_in :contacts
 end

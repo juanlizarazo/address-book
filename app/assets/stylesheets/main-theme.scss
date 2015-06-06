@@ -1,6 +1,8 @@
 // import bootstrap
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "compass/css3";
+@import "compass/utilities";
 
 // Font awesome
 @import "font-awesome";
@@ -10,6 +12,7 @@ $opacity-start: 0;
 $opacity-end: 100;
 $btn-edit-bg: #1AB394;
 $btn-edit-border-color: darken($btn-edit-bg, 5);
+$contact-bg-color: lighten($text-muted, 50);
 
 body {
   padding-top: 70px;
@@ -66,4 +69,9 @@ hr {
     border-color: $btn-edit-border-color;
     background-color: darken($btn-edit-bg, 5);
   }
+}
+
+.contact-info {
+  @include border-radius(10px);
+  background: $contact-bg-color;
 }
