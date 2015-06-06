@@ -1,10 +1,10 @@
 <%= form_for(@contact) do |f| %>
   <div class="form-group">
-    <%= f.label :firstname %><br>
+    <%= f.label :firstname %>
     <%= f.text_field :firstname, class: 'form-control' %>
   </div>
   <div class="form-group">
-    <%= f.label :lastname %><br>
+    <%= f.label :lastname %>
     <%= f.text_field :lastname, class: 'form-control' %>
   </div>
 
@@ -15,28 +15,36 @@
 
   <% @contact.phones.each do |phone| %>
     <div class="form-group">
-      <%= f.fields_for :phone, phone do |phone_fields| %>
-        <%= phone_fields.label :phone %><br>
+      <%= f.fields_for :phones, phone do |phone_fields| %>
+        <%= phone_fields.label :phone %>
         <%= phone_fields.text_field :number, class: 'form-control' %>
       <% end %>
     </div>
   <% end %>
 
   <% @contact.addresses.each do |address| %>
-    <div class="form-group">
       <%= f.fields_for :addresses, address do |fields| %>
-        <%= fields.label :street_address_1 %><br>
-        <%= fields.text_field :street_address_1, class: 'form-control' %>
-        <%= fields.label :street_address_2 %><br>
-        <%= fields.text_field :street_address_2, class: 'form-control' %>
-        <%= fields.label :city %><br>
-        <%= fields.text_field :city, class: 'form-control' %>
-        <%= fields.label :state %><br>
-        <%= fields.text_field :state, class: 'form-control' %>
-        <%= fields.label :country %><br>
-        <%= fields.text_field :country, class: 'form-control' %>
+        <div class="form-group">
+          <%= fields.label :street_address_1 %>
+          <%= fields.text_field :street_address_1, class: 'form-control' %>
+        </div>
+        <div class="form-group">
+          <%= fields.label :street_address_2 %>
+          <%= fields.text_field :street_address_2, class: 'form-control' %>
+        </div>
+        <div class="form-group">
+          <%= fields.label :city %>
+          <%= fields.text_field :city, class: 'form-control' %>
+        </div>
+        <div class="form-group">
+          <%= fields.label :state %>
+          <%= fields.text_field :state, class: 'form-control' %>
+        </div>
+        <div class="form-group">
+          <%= fields.label :country %>
+          <%= fields.text_field :country, class: 'form-control' %>
+        </div>
       <% end %>
-    </div>
   <% end %>
 
   <%= button_tag type: 'submit', class: 'btn btn-success' do %>

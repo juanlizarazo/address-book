@@ -33,12 +33,14 @@ class ContactsController < ApplicationController
         end
         format.json { render :show, status: :created, location: @contact }
       else
-        format.html { render :new }
+        format.html do
+          set_flash_errors
+          render :new
+        end
         format.json do
           render json: @contact.errors, status: :unprocessable_entity
         end
       end
-      set_errors
     end
   end
 
@@ -50,12 +52,14 @@ class ContactsController < ApplicationController
         end
         format.json { render :show, status: :ok, location: @contact }
       else
-        format.html { render :edit }
+        format.html do
+          set_flash_errors
+          render :edit
+        end
         format.json do
           render json: @contact.errors, status: :unprocessable_entity
         end
       end
-      set_errors
     end
   end
 
@@ -89,9 +93,8 @@ class ContactsController < ApplicationController
       )
   end
 
-  def set_errors
-    if @contact.errors.any?
-      flash[:error] = @contact.errors.full_messages.to_sentence
-    end
+  def set_flash_errors
+    flash[:error] = @contact.errors.full_messages.to_sentence if
+      @contact.errors.any?
   end
 end
