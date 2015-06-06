@@ -94,7 +94,7 @@ class ContactsController < ApplicationController
   end
 
   def set_flash_errors
-    flash[:error] = @contact.errors.full_messages.to_sentence if
+    flash.now[:error] = @contact.errors.full_messages.to_sentence if
       @contact.errors.any?
   end
 end
