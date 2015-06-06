@@ -14,4 +14,11 @@ class Contact
 
   accepts_nested_attributes_for :addresses, :phones, :emails
 
+  after_initialize :init_embedded_attributes
+
+  # Init embedded documents when empty
+  def init_embedded_attributes
+    self.phones = [Phone.new] unless phones.count > 0
+    self.addresses = [Address.new] unless addresses.count > 0
+  end
 end
