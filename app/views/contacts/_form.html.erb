@@ -24,7 +24,7 @@
     # TODO: UI support to add multiple phones, emails and addresses per contact.
     # Data model already supports this as well as views.
   %>
-  
+
   <% @contact.phones.each do |phone| %>
     <div class="form-group">
       <%= f.fields_for :phones, phone do |phone_fields| %>
