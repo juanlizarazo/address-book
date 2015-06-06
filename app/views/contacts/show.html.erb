@@ -3,7 +3,7 @@
 <div class="row">
   <div class="col-lg-6">
     <%= link_to contacts_path, class: 'btn btn-default btn-xs' do %>
-      <i class="fa fa-arrow-circle-left"></i> Go back
+      <i class="fa fa-arrow-circle-left"></i> <%= t('label.button.go_back')%>
     <% end %>
   </div>
   <div class="col-lg-6 text-right">
@@ -23,7 +23,7 @@
 
     <div class="col-lg-6">
       <p>
-        <strong><%= 'Address'.pluralize(@contact.addresses.count) %>:</strong>
+        <strong><%= t('helpers.label.address.address').pluralize(@contact.addresses.count) %>:</strong>
       <p>
       <address>
         <% @contact.addresses.each do |address| %>
@@ -35,7 +35,7 @@
       </address>
     </div>
     <div class="col-lg-6">
-      <p><strong><%= 'Phone'.pluralize(@contact.phones.count) %>:</strong></p>
+      <p><strong><%= t('helpers.label.phone.phone').pluralize(@contact.phones.count) %>:</strong></p>
       <% @contact.phones.each do |phone| %>
         <abbr title="Phone">P:</abbr> <%= number_to_phone(phone.number, area_code: true) %><br>
       <% end %>

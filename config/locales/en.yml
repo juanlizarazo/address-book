@@ -6,7 +6,7 @@ en:
       destroy: 'Contact successfully removed.'
 
   label:
-    navbar:
+    main:
       show_all: 'Contact list'
       add_contact: 'Add contact'
     button:
@@ -14,17 +14,36 @@ en:
       edit_contact: 'Edit contact'
       view_contact: 'View contact'
       save: 'Save'
+    title:
+      contact: 'Contact'
 
   helpers:
     label:
       contact:
         firstname: 'First name'
         lastname: 'Last name'
-        phone: 'Phone'
-        email: 'Email'
+      phone:
+        phone: 'phone'
+      email:
+        email: 'email'
+      address:
         address: 'Address'
-        street_1: 'Street address 1'
-        street_2: 'Street address 2'
+        street_address_1: 'Street address 1'
+        street_address_2: 'Street address 2'
         city: 'City'
         state: 'State'
         country: 'Country'
+
+  mongoid:
+    errors:
+      models:
+        contact:
+          attributes:
+            firstname:
+              blank: 'cannot be blank'
+            lastname:
+              blank: 'cannot be blank'
+    attributes:
+      contact:
+        firstname: 'Firstname'
+        lastname: 'Lastname'

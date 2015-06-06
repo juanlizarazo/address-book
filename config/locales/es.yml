@@ -6,7 +6,7 @@ es:
       destroy: 'Contacto eliminado exitosamente.'
 
   label:
-    navbar:
+    main:
       show_all: 'Lista de contactos'
       add_contact: 'Añadir contacto'
     button:
@@ -14,17 +14,36 @@ es:
       edit_contact: 'Editar contacto'
       view_contact: 'Ver contacto'
       save: 'Guardar'
+    title:
+      contact: 'Contacto'
 
   helpers:
     label:
       contact:
         firstname: 'Nombre'
         lastname: 'Apellido'
+      phone:
         phone: 'Telefono'
+      email:
         email: 'Correo electrónico'
-        address: 'Direccion'
-        street_1: 'Dirección principal'
-        street_2: 'Dirección (Linea adicional)'
+      address:
+        address: 'Dirección'
+        street_address_1: 'Dirección principal'
+        street_address_2: 'Dirección (Linea adicional)'
         city: 'Ciudad'
         state: 'Estado'
         country: 'País'
+
+  mongoid:
+    errors:
+      models:
+        contact:
+          attributes:
+            firstname:
+              blank: 'es obligatorio'
+            lastname:
+              blank: 'es obligatorio'
+    attributes:
+      contact:
+        firstname: 'Nombre'
+        lastname: 'Apellido'
