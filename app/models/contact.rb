@@ -11,4 +11,7 @@ class Contact
   embeds_many :addresses
   embeds_many :phones
   embeds_many :emails
+
+  accepts_nested_attributes_for :addresses, :phones, :emails
+
 end

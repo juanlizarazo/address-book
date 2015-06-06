@@ -41,8 +41,6 @@ class ContactsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /contacts/1
-  # PATCH/PUT /contacts/1.json
   def update
     respond_to do |format|
       if @contact.update(contact_params)
@@ -59,8 +57,6 @@ class ContactsController < ApplicationController
     end
   end
 
-  # DELETE /contacts/1
-  # DELETE /contacts/1.json
   def destroy
     @contact.destroy
     redirect_to contacts_url, notice: 'Contact was successfully deleted.'
@@ -73,6 +69,12 @@ class ContactsController < ApplicationController
   end
 
   def contact_params
-    params.require(:contact).permit(:firstname, :lastname)
+    params
+      .require(:contact)
+      .permit(
+        :firstname,
+        :lastname,
+        phones_attributes: [:number, :id]
+      )
   end
 end

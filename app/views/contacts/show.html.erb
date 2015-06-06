@@ -37,7 +37,7 @@
     <div class="col-lg-6">
       <p><strong><%= 'Phone'.pluralize(@contact.phones.count) %>:</strong></p>
       <% @contact.phones.each do |phone| %>
-        <abbr title="Phone">P:</abbr> <%= number_to_phone(phone.number, area_code: true) %>
+        <abbr title="Phone">P:</abbr> <%= number_to_phone(phone.number, area_code: true) %><br>
       <% end %>
     </div>
   </div>

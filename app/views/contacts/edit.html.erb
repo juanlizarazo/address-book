@@ -1,6 +1,19 @@
-<h1>Editing contact</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Show', @contact %> |
-<%= link_to 'Back', contacts_path %>
+<p></p>
+<div class="row">
+  <div class="col-lg-6">
+    <%= link_to contacts_path, class: 'btn btn-default btn-xs' do %>
+      <i class="fa fa-arrow-circle-left"></i> Go back
+    <% end %>
+  </div>
+  <div class="col-lg-6 text-right">
+    <%= link_to @contact, class: 'btn btn-primary btn-xs' do %>
+      <i class="fa fa-search"></i> View contact
+    <% end %>
+  </div>
+  <div class="col-lg-12">
+    <hr>
+  </div>
+  <div class="col-lg-12 contact-info">
+    <%= render 'form' %>
+  </div>
+</div>

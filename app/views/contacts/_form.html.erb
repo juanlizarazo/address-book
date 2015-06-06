@@ -20,7 +20,16 @@
     <%= f.text_field :lastname %>
   </div>
 
-  <%= f.submit 'Save', class: 'btn btn-success' do %>
-    <i class="fa fa-check-square-o"></i>
+  <% @contact.phones.each do |phone| %>
+    <div class="form-group">
+      <%= f.fields_for :phones, phone do |phone_fields| %>
+        <%= phone_fields.label :phone %><br>
+        <%= phone_fields.text_field :number %>
+      <% end %>
+    </div>
+  <% end %>
+
+  <%= button_tag type: 'submit', class: 'btn btn-success' do %>
+    <i class="fa fa-check-square-o"></i> Save
   <% end %>
 <% end %>
