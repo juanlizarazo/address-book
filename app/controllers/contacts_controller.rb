@@ -38,6 +38,7 @@ class ContactsController < ApplicationController
           render json: @contact.errors, status: :unprocessable_entity
         end
       end
+      set_errors
     end
   end
 
@@ -54,6 +55,7 @@ class ContactsController < ApplicationController
           render json: @contact.errors, status: :unprocessable_entity
         end
       end
+      set_errors
     end
   end
 
@@ -85,5 +87,11 @@ class ContactsController < ApplicationController
           :zipcode
         ]
       )
+  end
+
+  def set_errors
+    if @contact.errors.any?
+      flash[:error] = @contact.errors.full_messages.to_sentence
+    end
   end
 end
