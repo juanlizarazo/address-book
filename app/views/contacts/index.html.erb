@@ -7,8 +7,11 @@
   <tbody>
     <% @contacts.each do |contact| %>
       <tr class="contact-row">
-        <td class="contact-preview" data-link="<%= contact_path(contact) %>">
-          <%= contact.firstname %> <%= contact.lastname %>
+        <td class="contact-preview">
+          <%= link_to contact_path(contact),
+                      text: 'Click to see contact details' do %>
+            <%= contact.firstname %> <%= contact.lastname %>
+          <% end %>
         </td>
         <td class="text-right actions">
           <%= link_to edit_contact_path(contact),
@@ -16,7 +19,6 @@
                       title: "Edit #{contact.firstname} #{contact.lastname}" do %>
             <i class="fa fa-edit"></i>
           <% end %>
-
           <%= link_to contact,
                       method: :delete,
                       class: 'btn btn-danger btn-xs',
