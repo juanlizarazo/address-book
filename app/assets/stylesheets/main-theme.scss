@@ -8,10 +8,12 @@
 //vars
 $opacity-start: 0;
 $opacity-end: 100;
+$btn-edit-bg: #1AB394;
+$btn-edit-border-color: darken($btn-edit-bg, 5);
 
 body {
   padding-top: 70px;
-  background-color: #eee;
+  background-color: #EEEEEE;
 }
 
 // make all images responsive by default
@@ -37,5 +39,21 @@ tr.contact-row {
     .actions {
       opacity: $opacity-end;
     }
+  }
+}
+
+hr {
+  margin-top: $padding-base-horizontal / 2;
+  margin-bottom: $padding-base-horizontal;
+  border-top: 1px solid lighten($gray-dark, 50);
+}
+
+.btn-edit {
+  @extend .btn-warning;
+  background-color: $btn-edit-bg;
+  border-color: $btn-edit-border-color;
+  &:hover {
+    border-color: $btn-edit-border-color;
+    background-color: darken($btn-edit-bg, 5);
   }
 }
