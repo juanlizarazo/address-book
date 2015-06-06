@@ -7,29 +7,23 @@
   <tbody>
     <% @contacts.each do |contact| %>
       <tr class="contact-row">
-        <td><%= contact.firstname %> <%= contact.lastname %></td>
-        <td class="text-right">
-          <div class="actions">
-            <%= link_to contact,
-                        class: 'btn btn-primary btn-xs',
-                        title: "View #{contact.firstname} #{contact.lastname}" do %>
-              <i class="fa fa-user"></i>
-            <% end %>
+        <td class="contact-preview" data-link="<%= contact_path(contact) %>">
+          <%= contact.firstname %> <%= contact.lastname %>
+        </td>
+        <td class="text-right actions">
+          <%= link_to edit_contact_path(contact),
+                      class: 'btn btn-warning btn-xs',
+                      title: "Edit #{contact.firstname} #{contact.lastname}" do %>
+            <i class="fa fa-edit"></i>
+          <% end %>
 
-            <%= link_to edit_contact_path(contact),
-                        class: 'btn btn-warning btn-xs',
-                        title: "Edit #{contact.firstname} #{contact.lastname}" do %>
-              <i class="fa fa-edit"></i>
-            <% end %>
-
-            <%= link_to contact,
-                        method: :delete,
-                        class: 'btn btn-danger btn-xs',
-                        title: "Remove #{contact.firstname} #{contact.lastname}",
-                        data: { confirm: 'Are you sure?' } do %>
-              <i class="fa fa-trash"></i>
-            <% end %>
-          </div>
+          <%= link_to contact,
+                      method: :delete,
+                      class: 'btn btn-danger btn-xs',
+                      title: "Remove #{contact.firstname} #{contact.lastname}",
+                      data: { confirm: 'Are you sure?' } do %>
+            <i class="fa fa-trash"></i>
+          <% end %>
         </td>
       </tr>
     <% end %>
