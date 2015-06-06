@@ -74,7 +74,16 @@ class ContactsController < ApplicationController
       .permit(
         :firstname,
         :lastname,
-        phones_attributes: [:number, :id]
+        phones_attributes: [:id, :number],
+        addresses_attributes: [
+          :id,
+          :street_address_1,
+          :street_address_2,
+          :city,
+          :state,
+          :country,
+          :zipcode
+        ]
       )
   end
 end
