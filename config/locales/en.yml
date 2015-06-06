@@ -20,4 +20,32 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  contact:
+    success:
+      create: 'Contact successfully created.'
+      update: 'Contact successfully updated.'
+      destroy: 'Contact successfully removed.'
+
+  label:
+    navbar:
+      show_all: 'Contact list'
+      add_contact: 'Add contact'
+    button:
+      go_back: 'Go back'
+      edit_contact: 'Edit contact'
+      view_contact: 'View contact'
+      save: 'Save'
+
+  helpers:
+    label:
+      contact:
+        firstname: 'First name'
+        lastname: 'Last name'
+        phone: 'Phone'
+        email: 'Email'
+        address: 'Address'
+        street_1: 'Street address 1'
+        street_2: 'Street address 2'
+        city: 'City'
+        state: 'State'
+        country: 'Country'

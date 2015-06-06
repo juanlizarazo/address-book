@@ -29,7 +29,7 @@ class ContactsController < ApplicationController
     respond_to do |format|
       if @contact.save
         format.html do
-          redirect_to @contact, notice: 'Contact was successfully created.'
+          redirect_to @contact, notice: t('contact.success.create')
         end
         format.json { render :show, status: :created, location: @contact }
       else
@@ -48,7 +48,7 @@ class ContactsController < ApplicationController
     respond_to do |format|
       if @contact.update(contact_params)
         format.html do
-          redirect_to @contact, notice: 'Contact was successfully updated.'
+          redirect_to @contact, notice: t('contact.success.update')
         end
         format.json { render :show, status: :ok, location: @contact }
       else
@@ -65,7 +65,7 @@ class ContactsController < ApplicationController
 
   def destroy
     @contact.destroy
-    redirect_to contacts_url, notice: 'Contact was successfully deleted.'
+    redirect_to contacts_url, notice: t('contact.success.destroy')
   end
 
   private
