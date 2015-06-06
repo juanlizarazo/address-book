@@ -16,7 +16,11 @@
   </div>
   <div class="col-lg-12 contact-info">
     <h3><%= @contact.firstname %> <%= @contact.lastname %></h3>
+    <% @contact.emails.each do |data| %>
+      <h4 class="text-muted"><%= data.email %></h4>
+    <% end %>
     <br>
+    <p><strong><%= 'Phone'.pluralize(@contact.phones.count) %>:</strong></p>
     <div class="col-lg-6">
       <p>
         <strong><%= 'Address'.pluralize(@contact.addresses.count) %>:</strong>
