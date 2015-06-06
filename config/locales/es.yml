@@ -1,0 +1,30 @@
+es:
+  contact:
+    success:
+      create: 'Contacto creado exitosamente.'
+      update: 'Contacto actualizado exitosamente.'
+      destroy: 'Contacto eliminado exitosamente.'
+
+  label:
+    navbar:
+      show_all: 'Lista de contactos'
+      add_contact: 'Añadir contacto'
+    button:
+      go_back: 'Regresar'
+      edit_contact: 'Editar contacto'
+      view_contact: 'Ver contacto'
+      save: 'Guardar'
+
+  helpers:
+    label:
+      contact:
+        firstname: 'Nombre'
+        lastname: 'Apellido'
+        phone: 'Telefono'
+        email: 'Correo electrónico'
+        address: 'Direccion'
+        street_1: 'Dirección principal'
+        street_2: 'Dirección (Linea adicional)'
+        city: 'Ciudad'
+        state: 'Estado'
+        country: 'País'
