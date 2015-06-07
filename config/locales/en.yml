@@ -34,6 +34,10 @@ en:
         state: 'State'
         country: 'Country'
 
+  validator:
+    email:
+      invalid_format: 'is not formatted properly'
+
   mongoid:
     errors:
       models:
@@ -43,7 +47,11 @@ en:
               blank: 'cannot be blank'
             lastname:
               blank: 'cannot be blank'
+            emails:
+              invalid: 'is not formatted properly'
     attributes:
       contact:
         firstname: 'Firstname'
         lastname: 'Lastname'
+      emails:
+        emails: 'email'
