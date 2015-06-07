@@ -22,7 +22,7 @@ class Contact
   # Init embedded documents when empty
   def init_embedded_attributes
     self.phones = [Phone.new] unless phones.count > 0
-    self.emails = [Email.new] unless phones.count > 0
+    self.emails = [Email.new] unless emails.count > 0
     self.addresses = [Address.new] unless addresses.count > 0
   end
 end

@@ -4,5 +4,7 @@ class Email
 
   field :email, type: String
 
+  validates :email, email: true, allow_blank: true
+
   embedded_in :contacts
 end

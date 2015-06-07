@@ -80,6 +80,7 @@ class ContactsController < ApplicationController
       .permit(
         :firstname,
         :lastname,
+        emails_attributes: [:id, :email],
         phones_attributes: [:id, :number],
         addresses_attributes: [
           :id,
