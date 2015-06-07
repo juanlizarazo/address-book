@@ -21,7 +21,7 @@ This address book is a simple but functional web-app that features:
 ## Code status 
 [![Build Status](https://travis-ci.org/juanlizarazo/address-book.svg)](https://travis-ci.org/juanlizarazo/address-book) [![Code Climate](https://codeclimate.com/github/juanlizarazo/address-book/badges/gpa.svg)](https://codeclimate.com/github/juanlizarazo/address-book) [![Test Coverage](https://codeclimate.com/github/juanlizarazo/address-book/badges/coverage.svg)](https://codeclimate.com/github/juanlizarazo/address-book/coverage) [![Dependency Status](https://gemnasium.com/juanlizarazo/address-book.svg)](https://gemnasium.com/juanlizarazo/address-book)
 
-## license
+## License
 
 The MIT License (MIT)
 
