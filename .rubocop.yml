@@ -22,3 +22,7 @@ Style/ClassAndModuleChildren:
 # Max number of lines inside a method
 Metrics/MethodLength:
   Enabled: false
+
+AllCops:
+  Exclude:
+    - 'bin/*'
