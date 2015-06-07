@@ -16,10 +16,12 @@
       <div class="row">
         <%= render 'layouts/messages' %>
       </div>
-       <%= yield %>
-      <div class="row">
-        <%= render 'layouts/footer' %>
+      <div class="content">
+        <%= yield %>
       </div>
+      <footer class="footer">
+        <%= render 'layouts/footer' %>
+      </footer>
     </div>
   </body>
 </html>
