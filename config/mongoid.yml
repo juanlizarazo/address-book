@@ -8,7 +8,8 @@ development:
       database: address_book_development
       # Provides the hosts the default session can connect to. Must be an array
       # of host:port pairs. (required)
-      uri: <%= ENV['MONGOHQ_URL'] %>
+      hosts:
+        - localhost:27017
       options:
         # Change the default write concern. (default = { w: 1 })
         # write:
@@ -105,6 +106,7 @@ production:
     default:
       uri: <%= ENV['MONGOHQ_URL'] %>
       options:
-        consistency: :strong
-        max_retries: 1
-        retry_interval: 0
+        max_retries: 30
+        retry_interval: 1
+        timeout: 15
+        refresh_interval: 10
