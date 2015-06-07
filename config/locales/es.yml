@@ -9,11 +9,14 @@ es:
     main:
       show_all: 'Lista de contactos'
       add_contact: 'Añadir contacto'
+      language: 'Lenguaje'
     button:
       go_back: 'Regresar'
       edit_contact: 'Editar contacto'
       view_contact: 'Ver contacto'
       save: 'Guardar'
+      spanish: 'Español'
+      english: 'Ingles'
     title:
       contact: 'Contacto'
 

@@ -1,8 +1,8 @@
 <div class="row" id="footer">
   <div class="col-xs-6 col-lg-6">
-    Language:
-    <%= link_to 'English', '?lang=en', class: 'btn btn-default btn-xs' %> |
-    <%= link_to 'Espanol', '?lang=es', class: 'btn btn-default btn-xs' %>
+    <%= t('label.main.language') %>:
+    <%= link_to t('label.button.english'), '?lang=en', class: 'btn btn-default btn-xs' %> |
+    <%= link_to t('label.button.spanish'), '?lang=es', class: 'btn btn-default btn-xs' %>
   </div>
   <div class="col-xs-6 col-lg-6 text-right">
     Juan Lizarazo &copy; <%= Time.now.year %>
