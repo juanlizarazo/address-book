@@ -1,6 +1,6 @@
 # Address book 
 
-This address book is a simple but functional web-app that features: 
+This address book is a simple but fully functional web-app that features: 
 
 - [Ruby on rails 4](http://rubyonrails.org/)
 - NoSQL database [mongodb](https://www.mongodb.org/) (2.6.10) with denormalized data model using embedded documents for faster reads. 
