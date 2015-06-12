@@ -56,3 +56,4 @@ es:
       contact:
         firstname: 'Nombre'
         lastname: 'Apellido'
+        emails: 'Correo electrónico'

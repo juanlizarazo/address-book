@@ -26,7 +26,7 @@ en:
         firstname: 'First name'
         lastname: 'Last name'
       phone:
-        phone: 'phone'
+        phone: 'Phone'
       email:
         email: 'email'
       address:
@@ -56,5 +56,4 @@ en:
       contact:
         firstname: 'Firstname'
         lastname: 'Lastname'
-      emails:
         emails: 'email'
