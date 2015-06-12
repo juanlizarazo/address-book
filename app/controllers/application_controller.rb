@@ -13,9 +13,7 @@ class ApplicationController < ActionController::Base
     session[:locale] ||= :en
 
     locale = params[:lang]
-    if ['en', 'es'].include?(locale)
-      session[:locale] = locale
-    end
+    session[:locale] = locale if %w(en es).include?(locale)
 
     I18n.locale = session[:locale]
   end
