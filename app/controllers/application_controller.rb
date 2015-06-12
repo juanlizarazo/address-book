@@ -10,16 +10,10 @@ class ApplicationController < ActionController::Base
   # Set locale from URI param. When not available, default to english.
   # If already set and not present on URI, use the one set in session.
   def set_locale
-    if params.key?(:lang) && session[:locale] != params[:lang]
-      case params[:lang]
-      when 'en'
-        locale = :en
-      when 'es'
-        locale = :es
-      else
-        locale = :en
-      end
+    session[:locale] ||= :en
 
+    locale = params[:lang]
+    if ['en', 'es'].include?(locale)
       session[:locale] = locale
     end
 
