@@ -28,7 +28,8 @@
       <address>
         <% @contact.addresses.each do |address| %>
           <%= address.street_address_1 %><br>
-          <%= "#{address.street_address_2} <br>" unless address.street_address_2.blank? %>
+          <%= address.street_address_2 %>
+          <%= '<br>'.html_safe unless address.street_address_2.blank? %>
           <%= address.city %>, <%= address.state %> <%= address.zipcode %><br>
           <%= address.country unless address.country.blank? %>
         <% end %>
