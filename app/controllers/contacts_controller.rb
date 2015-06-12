@@ -15,6 +15,11 @@ class ContactsController < ApplicationController
   # GET /contacts/new
   def new
     @contact = Contact.new
+
+    # Init embedded documents
+    @contact.phones.build
+    @contact.emails.build
+    @contact.addresses.build
   end
 
   # GET /contacts/1/edit
