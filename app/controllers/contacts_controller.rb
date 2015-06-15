@@ -1,18 +1,14 @@
 class ContactsController < ApplicationController
   before_action :set_contact, only: [:show, :edit, :update, :destroy]
+  respond_to :html, :json
 
-  # GET /contacts
-  # GET /contacts.json
   def index
     @contacts = Contact.all
   end
 
-  # GET /contacts/1
-  # GET /contacts/1.json
   def show
   end
 
-  # GET /contacts/new
   def new
     @contact = Contact.new
 
@@ -22,50 +18,22 @@ class ContactsController < ApplicationController
     @contact.addresses.build
   end
 
-  # GET /contacts/1/edit
   def edit
   end
 
-  # POST /contacts
-  # POST /contacts.json
   def create
     @contact = Contact.new(contact_params)
+    flash[:notice] = t('contact.success.create') if @contact.save
+    set_flash_errors
 
-    respond_to do |format|
-      if @contact.save
-        format.html do
-          redirect_to @contact, notice: t('contact.success.create')
-        end
-        format.json { render :show, status: :created, location: @contact }
-      else
-        format.html do
-          set_flash_errors
-          render :new
-        end
-        format.json do
-          render json: @contact.errors, status: :unprocessable_entity
-        end
-      end
-    end
+    respond_with(@contact)
   end
 
   def update
-    respond_to do |format|
-      if @contact.update(contact_params)
-        format.html do
-          redirect_to @contact, notice: t('contact.success.update')
-        end
-        format.json { render :show, status: :ok, location: @contact }
-      else
-        format.html do
-          set_flash_errors
-          render :edit
-        end
-        format.json do
-          render json: @contact.errors, status: :unprocessable_entity
-        end
-      end
-    end
+    flash[:notice] = t('contact.success.update') if @contact.update(contact_params)
+    set_flash_errors
+
+    respond_with(@contact)
   end
 
   def destroy
